@@ -1,0 +1,225 @@
+body {
+  background: linear-gradient(to right, #ffffff, #000000, #ffffff);
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+header {
+  background-color: #000000;
+  padding: 5px;
+  border-radius: 36px;
+  text-align: center;
+}
+
+.footerdiv {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 15px;
+  margin-top: 36px;
+  background-color: #000000;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 0 5px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(255, 0, 0);
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+nav ul li a {
+  color: rgb(255, 0, 0);
+  text-decoration: none;
+}
+
+nav ul li:hover {
+  background-color: rgb(133, 0, 0);
+  animation: pulse 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  /* Ensures the video stays behind the content */
+  object-fit: cover;
+  /* Ensures the video covers the entire background */
+  filter: brightness(50%);
+  /* Optional: Add a filter for contrast */
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  /* Ensures the content stays above the video */
+  text-align: center;
+  padding: 50px;
+}
+
+/* Main Container Styling */
+
+div {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1110px;
+  box-shadow: 0 4px 8px rgb(255, 255, 255);
+  transform: translateY(-20px);
+  opacity: 0;
+  animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Image Styling */
+
+img {
+  border-radius: 8px;
+  /* Rounded corners for images */
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.8);
+  /* Add shadow for depth */
+}
+
+/* Page Navigation Styling */
+
+.pages {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.pages a {
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 0 5px;
+  background-color: #007bff;
+  color: #d88282;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.pages a:hover {
+  background-color: rgb(0, 0, 0);
+  animation: pulse 0.6s ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pages .nav_ext {
+  color: #c07b53;
+  font-size: 16px;
+  margin: 0 5px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  div {
+    padding: 15px;
+    margin: 15px;
+  }
+  .pages a {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
+.imgr {
+  display: flex;
+  text-align: center;
+  margin-bottom: auto;
+}
+
+.rree {
+  display: flex;
+  text-align: center;
+  margin: auto;
+}
+
+.btnregister {
+  background-color: #008cba;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.btnregister:hover {
+  transform: scale(1.1);
+  background-color: #005f75;
+}
+
+.btnregister:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* Modal */
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 0;
+  padding: 20px;
+  border: 1px solid #888;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  max-width: 650px;
+  z-index: 1;
+  left: 30%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: red;
+}

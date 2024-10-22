@@ -1,0 +1,118 @@
+body {
+  text-align: center;
+  margin-top: 450px;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+@keyframes fadeInBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  70% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+h2 {
+  color: rgb(10, 160, 10);
+  animation: fadeInBounce 5s ease forwards;
+}
+
+button {
+  background-color: #008cba;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  bottom: 10px;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background-color: #005f75;
+}
+
+button:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.btnregister {
+  background-color: #000000;
+  color: red;
+}
+
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+
+footer {
+  color: white;
+  text-align: center;
+  filter: brightness(100%);
+}
+/* home page title style */
+.animated-message {
+  opacity: 0; /* Start invisible */
+  transform: translateY(0); /* Start 20px down */
+  animation: fadeInUp 1s forwards; /* Animation */
+  font-size: 24px; /* Adjust font size as needed */
+  text-align: center; /* Center text */
+  margin-bottom: 20px; /* Space between heading and buttons */
+}
+
+.home-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 10px; /* Space between buttons */
+}
+
+.home-btn button {
+  opacity: 0; /* Start invisible */
+  transform: translateY(50px); /* Start 20px down */
+  animation: fadeInUp 1s forwards; /* Animation for buttons */
+  animation-delay: 0.5s; /* Delay for buttons to appear after heading */
+  padding: 10px 20px; /* Button padding */
+  font-size: 16px; /* Button font size */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.home-btn button:hover {
+  background-color: #007bff; /* Change color on hover */
+  color: white; /* Text color on hover */
+}
+
+/* Keyframes for the animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1; /* End visible */
+    transform: translateY(50%); /* Move to original position */
+  }
+}
